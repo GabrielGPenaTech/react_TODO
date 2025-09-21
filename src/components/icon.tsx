@@ -19,5 +19,11 @@ interface IconProps extends React.ComponentProps<"svg">,
 }
 
 export function Icon({ svg: SvgComponent, animate, className, ...props }: IconProps) {
-  return <SvgComponent className={iconVariants({ animate, className })} {...props} />
+
+  return (
+    <SvgComponent
+      className={iconVariants({ animate, className })}
+      {...props}
+    />
+  )
 }
